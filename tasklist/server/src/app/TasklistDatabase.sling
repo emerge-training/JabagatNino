@@ -31,6 +31,8 @@ func forContext(ctx as LoggingContext) static as this
     return v
 }
 
+
+
 func updateTable(table as SQLTableInfo)
 {
     if not table:
@@ -47,6 +49,8 @@ func updateTables
     task.addStringKeyColumn("id")
     task.addStringColumn("name")
     task.addStringColumn("description")
+    task.addLongColumn("timeStampAdded")
+    task.addLongColumn("timeStampLastUpdate")
     updateTable(task)
 
 }
